@@ -7,7 +7,7 @@ module.exports = {
 
   beforeInstall: function (options) {
     return RSVP.all([
-      this.addBowerPackageToProject('material-design-lite', '~1.0.4')
+      this.addBowerPackageToProject('material-design-lite', 'google/material-design-lite#9fd0c6b450bb111240467a1f3a024a29198507e4')
     ]);
   },
 
