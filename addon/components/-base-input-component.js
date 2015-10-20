@@ -15,7 +15,8 @@ export default BaseComponent.extend({
   isLabelFloating: true,
   errorMessage: null,
   classNameBindings: [
-    'isLabelFloating:mdl-textfield--floating-label'
+    'isLabelFloating:mdl-textfield--floating-label',
+    'hasErrors:is-invalid'
   ],
   // This should never change, so we deliberately
   //   declare no dependent property keys
@@ -45,5 +46,6 @@ export default BaseComponent.extend({
     } else {
       mdlComponent.input_.setCustomValidity('');
     }
-  }
+  },
+  hasErrors: computed.notEmpty('errorMessage')
 });
